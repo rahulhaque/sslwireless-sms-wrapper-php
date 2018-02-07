@@ -1,0 +1,21 @@
+{
+  "name": "sslwireless/sslwireless-sms",
+  "type": "library",
+  "description": "A simple php wrapper for sslwireless sms api.",
+  "keywords": ["php", "sslwireless", "sms", "api-wrapper"],
+  "homepage": "https://github.com/rahulhaque/sslwireless-sms-wrapper-php",
+  "authors": [
+    {
+      "name": "Rahul Haque",
+      "email": "rahulhaque07@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^5.2 || ^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "SslWireless\\": "src/"
+    }
+  }
+}
