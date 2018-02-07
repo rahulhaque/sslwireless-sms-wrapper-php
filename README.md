@@ -4,6 +4,7 @@ A simple php wrapper for sslwireless sms api.
 ## Usage
 - Clone the repository.
 - Import the class and create instance to access its functions.
+- Or install with `composer require sslwireless/sslwireless-sms`
 
 ## Example
 ```php
