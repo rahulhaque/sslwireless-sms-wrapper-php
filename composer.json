@@ -2,7 +2,7 @@
   "name": "sslwireless/sslwireless-sms",
   "type": "library",
   "description": "A simple php wrapper for sslwireless sms api.",
-  "keywords": ["php", "sslwireless", "sms", "api-wrapper"],
+  "keywords": ["php", "laravel", "sslwireless", "sms", "api-wrapper"],
   "license": "MIT",
   "authors": [
     {

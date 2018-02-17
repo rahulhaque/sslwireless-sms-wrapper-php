@@ -1,9 +1,9 @@
-# SslWireless Sms Api Wrapper for PHP
-A simple php wrapper for sslwireless sms api.
+# SslWireless Sms Api Wrapper for PHP / Laravel
+A simple php wrapper for sslwireless sms api. Supports Laravel.
 
 ## Usage
 - Clone the repository.
-- Import the class and create instance to access its functions.
+- Require the class and create instance to access its functions.
 - Or install with `composer require sslwireless/sslwireless-sms`
 
 ## Example
@@ -17,9 +17,33 @@ use SslWireless\SslWirelessSms;
 $SslWirelessSms = new SslWirelessSms('username','password', 'sid');
 // You can change the api url if needed. i.e.
 // $SslWirelessSms->setUrl('new_url');
-$result = $SslWirelessSms->send('123456789','This is a test message.');
+$output = $SslWirelessSms->send('123456789','This is a test message.');
 
-print_r($result);
+print_r($output);
+
+?>
+```
+
+## Laravel
+- Install with `composer require sslwireless/sslwireless-sms`
+```php
+<?php
+
+use SslWireless\SslWirelessSms; // Use the installed package
+
+class SomeController extends Controller
+{
+    public function someFunction()
+    {
+        // username, password, sid provided by sslwireless
+        $SslWirelessSms = new SslWirelessSms('username','password', 'sid');
+        // You can change the api url if needed. i.e.
+        // $SslWirelessSms->setUrl('new_url');
+        $output = $SslWirelessSms->send('123456789','This is a test message.');
+
+        dd($output);
+    }
+}
 
 ?>
 ```

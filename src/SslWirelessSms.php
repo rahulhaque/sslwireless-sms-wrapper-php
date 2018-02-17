@@ -77,7 +77,7 @@ class SslWirelessSms
 
         if ($parsed_result->SMSINFO->REFERENCEID) {
 
-            return json_encode([
+            return json_decode(json_encode([
                 'status' => 'success',
                 'result' => 'sms sent',
                 'phone' => $phone,
@@ -85,12 +85,12 @@ class SslWirelessSms
                 'reference_no' => $parsed_result->SMSINFO->CSMSID,
                 'ssl_reference_no' => $parsed_result->SMSINFO->REFERENCEID,
                 'datetime' => date('Y-m-d H:ia')
-            ]);
+            ]));
 
         }
         elseif ($parsed_result->SMSINFO->SMSVALUE) {
 
-            return json_encode([
+            return json_decode(json_encode([
                 'status' => 'failed',
                 'result' => 'invalid mobile or text',
                 'phone' => $phone,
@@ -98,12 +98,12 @@ class SslWirelessSms
                 'reference_no' => '',
                 'ssl_reference_no' => '',
                 'datetime' => date('Y-m-d H:ia')
-            ]);
+            ]));
 
         }
         elseif ($parsed_result->SMSINFO->MSISDNSTATUS) {
 
-            return json_encode([
+            return json_decode(json_encode([
                 'status' => 'failed',
                 'result' => 'invalid mobile no',
                 'phone' => $phone,
@@ -111,12 +111,12 @@ class SslWirelessSms
                 'reference_no' => '',
                 'ssl_reference_no' => '',
                 'datetime' => date('Y-m-d H:ia')
-            ]);
+            ]));
 
         }
         else {
 
-            return json_encode([
+            return json_decode(json_encode([
                 'status' => 'failed',
                 'result' => 'invalid credentials',
                 'phone' => $phone,
@@ -124,7 +124,7 @@ class SslWirelessSms
                 'reference_no' => '',
                 'ssl_reference_no' => '',
                 'datetime' => date('Y-m-d H:ia')
-            ]);
+            ]));
 
         }
 
